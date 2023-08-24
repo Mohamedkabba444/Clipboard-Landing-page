@@ -1,0 +1,338 @@
+:root {
+  --Strong-Cyan: hsl(171, 66%, 44%);
+  --Light-Blue: hsl(233, 100%, 69%);
+  --Dark-Grayish-Blue: hsl(210, 10%, 33%);
+  --Grayish-Blue: hsl(201, 11%, 66%);
+
+  --font-size: 1em;
+  --font-weight-regular: 400;
+  --font-weight-bold: 600;
+  --font-family: "Bai Jamjuree", sans-serif;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style-type: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+svg,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 100%;
+  background: url(images/bg-header-desktop.png);
+  background-repeat: no-repeat;
+  padding: 4em 0;
+}
+
+main .description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1em;
+
+  padding-inline: 2em;
+  margin-bottom: 6em;
+  text-align: center;
+}
+
+main .description .title {
+  color: var(--Dark-Grayish-Blue);
+  font-weight: var(--font-weight-bold);
+}
+
+main .description .content-description {
+  max-width: 450px;
+  font-weight: var(--font-weight-regular);
+  color: var(--Grayish-Blue);
+}
+
+main .description .btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+
+  margin-top: 1.5em;
+}
+
+.description .btn > * {
+  padding: 12px 35px 12px;
+  border-radius: 50px;
+  border: 0;
+  cursor: pointer;
+  color: #fff;
+  font-weight: var(--font-weight-bold);
+}
+
+.description .btn .download_ios {
+  background-color: var(--Strong-Cyan);
+  box-shadow: 3px 5px 5px hsl(171, 66%, 90%);
+}
+.description .btn .download_mac {
+  background-color: var(--Light-Blue);
+  box-shadow: 2px 5px 5px hsl(233, 100%, 90%);
+}
+
+.split {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-right: 6em;
+  margin-bottom: 7em;
+}
+
+article .contents {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  text-align: center;
+  margin-bottom: 3em;
+}
+
+article .contents .title {
+  font-weight: var(--font-weight-bold);
+  color: var(--Dark-Grayish-Blue);
+  max-width: 300px;
+}
+
+article .contents .content-description {
+  color: var(--Grayish-Blue);
+  font-weight: var(--font-weight-regular);
+  text-align: center;
+  max-width: 300px;
+}
+
+.grid-flow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1em;
+
+  text-align: center;
+  margin-bottom: 3em;
+}
+.grid-flow span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+span .title {
+  font-weight: var(--font-weight-bold);
+  color: var(--Dark-Grayish-Blue);
+  max-width: 350px;
+}
+
+span .description {
+  color: var(--Grayish-Blue);
+  font-weight: var(--font-weight-regular);
+  text-align: center;
+  max-width: 300px;
+}
+
+.grid-column-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.grid-column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.7em;
+}
+
+.grid-column .title {
+  font-weight: var(--font-weight-bold);
+  color: var(--Dark-Grayish-Blue);
+  max-width: 350px;
+}
+
+.grid-column .description {
+  color: var(--Grayish-Blue);
+  font-weight: var(--font-weight-regular);
+  text-align: center;
+  max-width: 300px;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 3em;
+
+  margin-bottom: 8em;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 2em;
+
+  background-color: gainsboro;
+  padding: 2em 0;
+}
+
+footer .logo img{
+  width: 50%;
+}
+
+footer ul {
+  list-style-type: none;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2em;
+}
+
+footer ul li a {
+  text-decoration: none;
+  font-weight: var(--font-weight-bold);
+  color: var(--Grayish-Blue);
+}
+
+footer ul li a:hover {
+  color: var(--Strong-Cyan);
+}
+
+footer .footer-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+}
+
+.footer-icons svg {
+  cursor: pointer;
+  fill: #4c545c;
+}
+
+.footer-icons svg:hover {
+  fill: var(--Strong-Cyan);
+}
+
+@media (max-width: 25em) {
+  main {
+    padding-inline: 1em;
+  }
+
+  main .description :is(.title, .content-description) {
+    max-width: 260px;
+  }
+
+  header {
+    background: url(images/bg-header-mobile.png);
+  }
+
+  .split {
+    padding-right: 0;
+  }
+
+  .split picture,
+  .contents {
+    margin-bottom: 3em;
+  }
+
+  .grid-column-container,
+  article,
+  .btn,
+  footer,
+  .icons {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  footer ul {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+    gap: 2em;
+  }
+}
